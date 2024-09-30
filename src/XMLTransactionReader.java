@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XMLTRANSACTIONREADER implements TransactionReader{
+public class XMLTransactionReader implements TransactionReader{
     @Override
     public List<Transaction> readTransactions(File file) {
         List<Transaction> transactions = new ArrayList<>();
