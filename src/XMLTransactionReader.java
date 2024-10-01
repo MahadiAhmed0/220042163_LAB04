@@ -23,7 +23,7 @@ public class XMLTransactionReader implements TransactionReader{
                 String date = element.getElementsByTagName("date").item(0).getTextContent();
                 double amount = Double.parseDouble(element.getElementsByTagName("amount").item(0).getTextContent());
                 String description = element.getElementsByTagName("description").item(0).getTextContent();
-                transactions.add(new XMLTransaction(date, amount, description));
+                transactions.add(new Transaction(date, amount, description));
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -12,7 +12,7 @@ public class CSVTransactionReader implements TransactionReader{
             br.readLine();
             while((line = br.readLine()) != null){
                 String[] fields = line.split(",");
-                transactions.add(new CSVTransaction(fields[0], Double.parseDouble(fields[1]), fields[2]));
+                transactions.add(new Transaction(fields[0], Double.parseDouble(fields[1]), fields[2]));
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -22,3 +22,4 @@ public class CSVTransactionReader implements TransactionReader{
         return transactions;
     }
 }
+
